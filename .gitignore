@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# 実行時に生成されるファイル
+logs/
+evals/results/
+data/escalations.jsonl
+
+# 環境変数・認証情報
+.env
+.env.*
+
+# OS / エディタ
+.DS_Store
+.vscode/
+.idea/
+
+# Claude Code のローカル設定
+.claude/settings.local.json

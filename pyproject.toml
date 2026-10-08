@@ -1,0 +1,21 @@
+[project]
+name = "sample-operator-help-agent"
+version = "0.1.0"
+description = "オペレーターの社内問い合わせに一次回答する学習用サンプルAIエージェント"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=1.11.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-m 'not live'"
+markers = [
+    "live: 実際の API / claude -p を呼ぶテスト（課金・利用枠を消費）",
+]
